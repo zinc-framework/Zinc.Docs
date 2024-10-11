@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 :root {
+    /* could maybe compute and bake these from data files */
+    --base-color: #2A2A2E;
+    --reference-color: #ff0044;
+    --guides-color: #0099db;
+    --philosophy-color: #63c74d;
+    --concepts-color: #fee761;
+    --about-color: #68386c;
+
     font-family: Inter, sans-serif;
     font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
     background-color: #2A2A2E;
@@ -13,20 +21,36 @@
     :root { font-family: InterVariable, sans-serif; }
 }
 
-/* a:link {
-    color: rgb(255, 255, 255); 
-    background-color: transparent; 
-    text-decoration: none;
-  }
+/* style inline code elements */
+:not(pre) > code {
+  @apply border-2 border-white rounded-lg overflow-x-auto p-1 bg-base;
+}
 
-  a:hover {
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
-  }
+/* style block code elements*/
+pre:has(code[class*="language-"]) {
+  @apply border-2 border-white rounded-lg overflow-x-auto p-4 bg-base;
+}
 
-  a:visited {
-    color: rgb(255, 255, 255);
-    background-color: transparent;
-    text-decoration: underline;  
-  } */
+/* remove border on home page */
+.home :not(pre) > code,
+.home pre:has(code[class*="language-"]) {
+  @apply border-0;
+}
+
+/* anchor link hover colors match section theme */
+/* could maybe compute and bake this at build time from colors in data */
+.reference .ha:hover {
+  color: var(--reference-color);
+}
+.guides .ha:hover {
+  color: var(--guides-color);
+}
+.philosophy .ha:hover {
+  color: var(--philosophy-color);
+}
+.concepts .ha:hover {
+  color: var(--concepts-color);
+}
+.about .ha:hover {
+  color: var(--about-color);
+}

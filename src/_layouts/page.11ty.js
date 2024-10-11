@@ -6,14 +6,11 @@ export default class Page {
   }
 
   render(data) {
-    // var parts = this.page.filePathStem.split('/').slice(1);
-    // console.log(parts);
-    console.log(data.page.fileSlug);
     let section = data.heirarchy.metadata[data.page.fileSlug].section;
     var sectionColor = data.sectionColors[section];
-    console.log(section);
-    console.log(sectionColor);
     return `
+      <div class="${section} ${data.page.fileSlug}">
+      <script type="module" src="/js/heading-anchors.js"></script>
       <div class="${sectionColor} h-80">
       
       <div class="container mx-auto max-w-4xl h-full flex flex-col">
@@ -30,10 +27,13 @@ export default class Page {
       </div>
       <div class="container mx-auto max-w-4xl h-full">
         <div class="h-12"></div>
-        <article class="prose max-w-2xl prose-p:text-white prose-headings:text-white">
+        <article class="prose max-w-2xl prose-p:text-white prose-code:text-white prose-code:before:hidden prose-code:after:hidden prose-headings:text-white">
+          <heading-anchors>
           ${data.content}
+          </heading-anchors>
           ${this.emoji("👋", "Waving hand")} Thanks for visiting!
         </article>
+      </div>
       </div>
     `;
   }

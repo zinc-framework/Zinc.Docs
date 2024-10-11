@@ -6,11 +6,13 @@ metaDescription: The homepage of my site
 
 One thing to try and do with Zinc is to not create custom types for everything as soon as you start.
 
+## Getting Started
+
 Try to sketch out basic behavior with the primitves (Sprite, Shape, etc.) and their built in functions (Update, Collider_OnStart, etc.).
 
-Those functions often pass in a reference to `self`, that you can cast to the type itself and perform operations on:
+Those functions often pass in a reference to `self` that you can cast to the type itself and perform operations on:
 
-```
+```cs
 (self as Shape).X = newX;
 ```
 
@@ -18,7 +20,7 @@ If you need some state handled between functions, it's easy to want to reach for
 
 Functions can add and remove tags at will, and inside your behavior functions you can switch based on tags. The "Cards" demo shows an example of this.
 
-```
+```cs
 on collide - add tag
 ```
 
@@ -26,7 +28,7 @@ Tags are a great way to scaffold and _test out_ behavior before committing to ne
 
 For example, imagine you want to test some sort of animation timing function where, after a certain point, a ship shows a little animation of a rocket plume when it moves. You _could_ create a Ship type and add in a member variable like "IsMoving", and in some update loop check that to spawn the animation:
 
-```
+```cs
 Ship class with IsMoving variable
 ```
 
@@ -34,7 +36,7 @@ However, doing this requires you committing to the idea of a ship and the idea o
 
 Instead consider a similar system with tags:
 
-```
+```cs
 Shape class with IsMoving tag
 ```
 

@@ -15,7 +15,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@zachleat/heading-anchors": "^1.0.1"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.15",

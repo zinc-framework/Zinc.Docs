@@ -10,7 +10,7 @@ export default class {
 
   render(data) {
     return `
-      <div class="container mx-auto">
+      <div class="container mx-auto home">
         <div>
           <img src="/images/logo.png" style="width:200px"></img>
         </div>
