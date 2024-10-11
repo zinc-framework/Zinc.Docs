@@ -1,5 +1,7 @@
 # zinc docs
 
+WIP - do not use yet. docs are incomplete and not hosted anywhere yet.
+
 built in 11ty + tailwind css
 
 everthing lives in `src/`
