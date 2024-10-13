@@ -1,10 +1,26 @@
+---
+layout: page.11ty.js
+title: getting started
+metaDescription: The homepage of my site
+---
+
 Getting started in Zinc is easy. I promise. The hardest part is cloning the repo, but after that it's simple.
+
+## Get the code
+
+### Start with the Template
+
+### Engine Only
 
 1. Clone Template Repo
 
 2. Run the application (Program.cs)
 
+## Get Something On Screen
 
+### Simplest Start
+
+### Make Things Move
 
 
 

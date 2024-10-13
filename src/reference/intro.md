@@ -1,6 +1,6 @@
 ---
 layout: page.11ty.js
-title: Intro
+title: intro
 metaDescription: The homepage of my site
 ---
 

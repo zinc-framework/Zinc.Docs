@@ -1,5 +1,6 @@
 import emojiShortcode from "./src/_includes/shortcodes/emoji.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import pluginTOC from "eleventy-plugin-toc";
 import { IdAttributePlugin } from "@11ty/eleventy";
 
 export default function (eleventyConfig) {
@@ -7,6 +8,21 @@ export default function (eleventyConfig) {
     eleventyConfig.addPlugin(syntaxHighlight);
     //https://www.11ty.dev/docs/plugins/id-attribute/
     eleventyConfig.addPlugin(IdAttributePlugin);
+    eleventyConfig.addPlugin(pluginTOC, {
+      tags: ['h2', 'h3', 'h4'], // which heading tags to include in the TOC
+      wrapper: 'nav',           // element to wrap the TOC in
+      wrapperClass: 'toc'       // class for the wrapper element
+    });
+
+    eleventyConfig.addTransform("add-toc", async function (content) {
+      // console.log(this.page.inputPath);
+      // console.log(this.page.outputPath);
+      console.log(eleventyConfig.getFilter("toc")(content));
+      content = content.replace('{TOC_PLACEHOLDER}', eleventyConfig.getFilter("toc")(content));
+      // pluginTOC.buildTOC(content, pluginTOC.parseOptions({},{}));
+      // console.log(toc(content));
+      return content; // no changes made.
+    });
 
     eleventyConfig.addPassthroughCopy({ public: "/" });
     // Copy the heading-anchors.js file to the output
