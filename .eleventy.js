@@ -2,6 +2,7 @@ import emojiShortcode from "./src/_includes/shortcodes/emoji.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginTOC from "eleventy-plugin-nesting-toc";
 import { IdAttributePlugin } from "@11ty/eleventy";
+import { InputPathToUrlTransformPlugin } from "@11ty/eleventy";
 
 export default function (eleventyConfig) {
     //https://www.11ty.dev/docs/plugins/syntaxhighlight/
@@ -13,6 +14,8 @@ export default function (eleventyConfig) {
       wrapper: 'nav',           // element to wrap the TOC in
       wrapperClass: 'toc'       // class for the wrapper element
     });
+    //https://www.11ty.dev/docs/plugins/inputpath-to-url/
+    eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
 
     eleventyConfig.addTransform("add-toc", async function (content) {
       // console.log(this.page.inputPath);

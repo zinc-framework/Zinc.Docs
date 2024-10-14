@@ -9,6 +9,6 @@ metaDescription: The homepage of my site
 Zinc.Engine.Boot(() => new Square());
 ```
 
-[<u>get started</u>](/reference/getting-started)
+[<u>get started</u>](reference/getting-started.md)
 
 <!-- {% emoji "👋" "Waving hand" %} Hi there! -->
