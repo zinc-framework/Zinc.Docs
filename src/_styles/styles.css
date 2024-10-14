@@ -37,6 +37,15 @@ pre:has(code[class*="language-"]) {
   @apply border-0;
 }
 
+/* style toc heading */
+.toc ol {
+  @apply list-none;
+}
+
+.toc ol ol {
+  @apply list-none list-inside pl-4 ;
+}
+
 /* anchor link hover colors match section theme */
 /* could maybe compute and bake this at build time from colors in data */
 .reference .ha:hover {

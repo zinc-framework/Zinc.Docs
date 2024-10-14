@@ -1,6 +1,6 @@
 import emojiShortcode from "./src/_includes/shortcodes/emoji.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import pluginTOC from "eleventy-plugin-toc";
+import pluginTOC from "eleventy-plugin-nesting-toc";
 import { IdAttributePlugin } from "@11ty/eleventy";
 
 export default function (eleventyConfig) {
@@ -17,7 +17,7 @@ export default function (eleventyConfig) {
     eleventyConfig.addTransform("add-toc", async function (content) {
       // console.log(this.page.inputPath);
       // console.log(this.page.outputPath);
-      console.log(eleventyConfig.getFilter("toc")(content));
+      // console.log(eleventyConfig.getFilter("toc")(content));
       content = content.replace('{TOC_PLACEHOLDER}', eleventyConfig.getFilter("toc")(content));
       // pluginTOC.buildTOC(content, pluginTOC.parseOptions({},{}));
       // console.log(toc(content));
