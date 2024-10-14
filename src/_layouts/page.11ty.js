@@ -37,13 +37,13 @@ export default class Page {
         </div>
       </div>
       <div class="container mx-auto max-w-4xl h-full">
-        <div class="sticky top-12">
-          <div class="absolute -left-64 top-16 underline">
+        <div class="sticky top-0">
+          <div class="absolute -left-64 top-20">
             {TOC_PLACEHOLDER}
           </div>
         </div>
-        <div class="h-12"></div>
-        <article class="prose max-w-2xl prose-p:text-white prose-code:text-white prose-code:before:hidden prose-code:after:hidden prose-headings:text-white">
+        <div class="h-6"></div>
+        <article class="prose prose-zinc prose-invert max-w-2xl prose-h2:text-3xl prose-code:before:hidden prose-code:after:hidden ">
         <heading-anchors>
         ${data.content}
         </heading-anchors>
@@ -51,6 +51,7 @@ export default class Page {
         </article>
       </div>
       </div>
+      <div class="h-32"></div>
     `;
   }
 }

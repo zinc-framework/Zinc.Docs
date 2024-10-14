@@ -1,0 +1,1 @@
+for all intents and purposes zinc is "open source" vs. being full "open source"

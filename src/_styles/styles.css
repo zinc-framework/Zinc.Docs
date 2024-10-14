@@ -38,6 +38,10 @@ pre:has(code[class*="language-"]) {
 }
 
 /* style toc heading */
+.toc ol h2 {
+  @apply no-underline;
+}
+
 .toc ol {
   @apply list-none;
 }

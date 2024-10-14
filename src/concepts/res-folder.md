@@ -1,5 +1,5 @@
 ---
 layout: page.11ty.js
-title: shape
+title: the res folder
 metaDescription: The homepage of my site
 ---

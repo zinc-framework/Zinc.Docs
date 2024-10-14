@@ -1,4 +1,5 @@
 import emojiShortcode from "./src/_includes/shortcodes/emoji.js";
+import relatedShortcode from "./src/_includes/shortcodes/related.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginTOC from "eleventy-plugin-nesting-toc";
 import { IdAttributePlugin } from "@11ty/eleventy";
@@ -12,7 +13,8 @@ export default function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginTOC, {
       tags: ['h2', 'h3', 'h4'], // which heading tags to include in the TOC
       wrapper: 'nav',           // element to wrap the TOC in
-      wrapperClass: 'toc'       // class for the wrapper element
+      headingText: 'On This Page',
+      wrapperClass: 'toc underline'       // class for the wrapper element
     });
     //https://www.11ty.dev/docs/plugins/inputpath-to-url/
     eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
@@ -33,6 +35,7 @@ export default function (eleventyConfig) {
       'node_modules/@zachleat/heading-anchors/heading-anchors.js': 'js/heading-anchors.js'
     });
     eleventyConfig.addShortcode("emoji", emojiShortcode);
+    eleventyConfig.addShortcode("related", relatedShortcode);
 
 
     eleventyConfig.addCollection("nestedContent", function(collectionApi) {
