@@ -1,4 +1,4 @@
-import { renderNestedContent } from '../_includes/renderNestedContent.js';
+import renderNestedContent from '../_includes/renderNestedContent.js';
 
 export default class {
   data() {
@@ -24,7 +24,7 @@ export default class {
           <p>turns out, you don’t need a lot. bells and whistles are starting to feel like a distraction. you want something simpler. more "pure". something that gets out of the way.</p>
           <p>you don’t even need an editor, you're making 2D games and can build your own tools.</p>
           <br>
-          <p>you want is a laser-focused 2D API with a few smart design decisions.</p>
+          <p>all you want a laser-focused 2D API with a few smart design decisions.</p>
           <p>the framework should do the the hard stuff — you can do everything else.</p>
           <br>
           <p>sound like you? you want zinc.</p>
