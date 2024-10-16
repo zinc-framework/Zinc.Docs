@@ -30,6 +30,7 @@ THINGS:
 * color theme is declared in /_data/colors.js. this is imported in the tailwind config to set the bg section colors.
 * the section color mappings are used renderNestedContent.js to pick the bg color style for the section background.
 * colors are also directly mimicked in the css for anchor link hover access
+* by default posts get the pages template (via src/src.json)
 
 anchors + toc
 * anchor links are generated automatically from markdown headings via the built-in IdAttributePlugin and the <headingAnchor> tag.

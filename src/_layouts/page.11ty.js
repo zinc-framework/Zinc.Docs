@@ -32,7 +32,7 @@ export default class Page {
 
 
           <div class="text-1xl mt-auto">${section}${subsection}</div>
-          <div class="text-5xl">${data.title}</div>
+          <div class="text-5xl">${data.title ?? data.page.fileSlug}</div>
           <div class="h-6"></div>
         </div>
       </div>
