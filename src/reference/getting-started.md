@@ -93,6 +93,8 @@ If you cloned down the engine only, you'll need to either run the `Zinc.csproj` 
 After running, you should see something like this on your screen:
 
 
+{% details "what about mono?" "zinc is a modern interpretation of a C#-centric game engine, and as such doesn't use mono/monogame. instead it has a its own cross-platform backend powered by sokol." %}
+
 
 {% related "/src/guides/working-with-csharp.md" %}
 

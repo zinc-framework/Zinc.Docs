@@ -1,5 +1,6 @@
 import emojiShortcode from "./src/_includes/shortcodes/emoji.js";
 import relatedShortcode from "./src/_includes/shortcodes/related.js";
+import detailsShortcode from "./src/_includes/shortcodes/details.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginTOC from "eleventy-plugin-nesting-toc";
 import { IdAttributePlugin } from "@11ty/eleventy";
@@ -34,8 +35,10 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({
       'node_modules/@zachleat/heading-anchors/heading-anchors.js': 'js/heading-anchors.js'
     });
+    
     eleventyConfig.addShortcode("emoji", emojiShortcode);
     eleventyConfig.addShortcode("related", relatedShortcode);
+    eleventyConfig.addShortcode("details", detailsShortcode);
 
 
     eleventyConfig.addCollection("nestedContent", function(collectionApi) {
