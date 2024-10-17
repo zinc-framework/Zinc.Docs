@@ -14,6 +14,7 @@ export default function renderNestedContent(content, depth = 1) {
 
     function renderSection(sectionTitle, sectionContent, depth = 1, html = '')
     {
+        console.log("adding section " + sectionTitle + " at depth " + depth + "------------");
         var depthClass = depth === 1 ? "text-2xl" : "text-1xl";
         if(depth === 1) {
             html += `<div class="${depthClass} ${sectionColors[sectionTitle]} max-w-48 px-3 py-1 -mx-3">${sectionTitle}</div>`;
@@ -25,6 +26,7 @@ export default function renderNestedContent(content, depth = 1) {
 
         for (let [nestedKey, nestedValue] of Object.entries(sectionContent)) {
             if(Array.isArray(nestedValue)) { //this is a file
+                console.log("adding file " + nestedKey);
                 html += `<p><a href="${nestedValue[0].url}">${nestedValue[0].data.title ?? nestedKey}</a></p>`;
             }
             else {
