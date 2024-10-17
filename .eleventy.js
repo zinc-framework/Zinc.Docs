@@ -5,6 +5,7 @@ import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginTOC from "eleventy-plugin-nesting-toc";
 import { IdAttributePlugin } from "@11ty/eleventy";
 import { InputPathToUrlTransformPlugin } from "@11ty/eleventy";
+// import { isGlobMatch } from "@11ty/eleventy/Util/GlobMatcher.js";
 
 export default function (eleventyConfig) {
     //https://www.11ty.dev/docs/plugins/syntaxhighlight/
@@ -43,9 +44,16 @@ export default function (eleventyConfig) {
 
     eleventyConfig.addCollection("nestedContent", function(collectionApi) {
       console.log("collection api dirty: " + collectionApi._dirty);
-        const content = collectionApi.getFilteredByGlob("src/**/*.md");
-        const nestedStructure = {};
-    
+      const nestedStructure = {};
+      
+      // let globs = collectionApi.getGlobs("src/**/*.md");
+      // collectionApi.getAllSorted().filter((item) => {
+      //   console.log(item.inputPath + " matches: " + isGlobMatch(item.inputPath, globs));
+      // });
+      
+      collectionApi._filteredByGlobsCache = new Map();
+      const content = collectionApi.getFilteredByGlob("src/**/*.md");
+      
         content.forEach(item => {
           const parts = item.filePathStem.split('/').slice(1);
           let current = nestedStructure;
