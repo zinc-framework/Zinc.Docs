@@ -42,6 +42,7 @@ export default function (eleventyConfig) {
 
 
     eleventyConfig.addCollection("nestedContent", function(collectionApi) {
+      console.log("collection api dirty: " + collectionApi._dirty);
         const content = collectionApi.getFilteredByGlob("src/**/*.md");
         const nestedStructure = {};
     
