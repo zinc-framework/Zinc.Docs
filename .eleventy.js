@@ -35,7 +35,7 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({
       'node_modules/@zachleat/heading-anchors/heading-anchors.js': 'js/heading-anchors.js'
     });
-    
+
     eleventyConfig.addShortcode("emoji", emojiShortcode);
     eleventyConfig.addShortcode("related", relatedShortcode);
     eleventyConfig.addShortcode("details", detailsShortcode);
@@ -48,11 +48,14 @@ export default function (eleventyConfig) {
         content.forEach(item => {
           const parts = item.filePathStem.split('/').slice(1);
           let current = nestedStructure;
+
+          // console.log(parts); 
           
           parts.forEach((part, index) => {
             if (index === parts.length - 1) {
               if (!current[part]) current[part] = [];
               current[part].push(item);
+              console.log("pushing " + item.filePathStem );
             } else {
               if (!current[part]) current[part] = {};
               current = current[part];
