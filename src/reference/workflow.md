@@ -1,6 +1,5 @@
 ---
-layout: page.11ty.js
-title: workflow2
+title: workflow
 metaDescription: The homepage of my site
 ---
 

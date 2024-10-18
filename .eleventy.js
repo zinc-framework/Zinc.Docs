@@ -71,9 +71,36 @@ export default function (eleventyConfig) {
             }
           });
         });
-    
+        console.log(nestedStructure);
         return nestedStructure;
       });
+
+    //   function buildNestedStructure(items, depth = 0) {
+    //     const structure = {};
+        
+    //     items.forEach(item => {
+    //       const parts = item.filePathStem.split('/').slice(1);
+    //       const currentPart = parts[depth];
+          
+    //       if (depth === parts.length - 1) {
+    //         if (!structure[currentPart]) structure[currentPart] = [];
+    //         structure[currentPart].push(item);
+    //         console.log("pushing " + item.filePathStem);
+    //       } else {
+    //         if (!structure[currentPart]) structure[currentPart] = {};
+    //         structure[currentPart] = {
+    //           ...structure[currentPart],
+    //           ...buildNestedStructure([item], depth + 1)
+    //         };
+    //       }
+    //     });
+        
+    //     return structure;
+    //   }
+      
+    //   const nestedStructure = buildNestedStructure(content);
+    //   console.log(nestedStructure);
+    // });
 
     return {
       dir: {
