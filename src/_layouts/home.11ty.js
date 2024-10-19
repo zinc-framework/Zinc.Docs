@@ -31,7 +31,7 @@ export default class {
           </details>
         </div>
         <div id="title-spacer" class="h-8"></div>
-        <div class="grid grid-cols-1 sm:grid-cols-5 gap-4">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-4">
           ${renderNestedContent(data.collections.nestedContent)}
         </div>
       </div>
