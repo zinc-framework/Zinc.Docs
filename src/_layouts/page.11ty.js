@@ -23,27 +23,27 @@ export default class Page {
       <div class="${sectionColor} h-80">
       
       <div class="container mx-auto max-w-4xl h-full flex flex-col">
-          <div class="absolute grid auto-cols-max grid-flow-col gap-8">
-            <div>
-              <a href="/"><img src="/images/logo.png" style="width:100px"></img></a>
-            </div>
+          <div class="px-4 lg:px-0">
+            <a href="/"><img src="/images/logo.png" style="width:100px"></img></a>
+          </div>
+          <div class="grid auto-cols-max grid-flow-col gap-8 px-4 lg:px-0 max-sm:hidden">
             ${navHTML}
           </div>
 
 
-          <div class="text-1xl mt-auto">${section}${subsection}</div>
-          <div class="text-5xl">${data.title ?? data.page.fileSlug}</div>
+          <div class="text-1xl mt-auto px-4 lg:px-0">${section}${subsection}</div>
+          <div class="text-5xl px-4 lg:px-0">${data.title ?? data.page.fileSlug}</div>
           <div class="h-6"></div>
         </div>
       </div>
       <div class="container mx-auto max-w-4xl h-full">
-        <div class="sticky top-0">
-          <div class="absolute -left-64 top-20">
+        <div class="block xl:sticky xl:top-0 px-4 xl:px-0">
+          <div class="block xl:absolute xl:-left-64 pt-8 xl:pt-0 xl:top-20">
             {TOC_PLACEHOLDER}
           </div>
         </div>
-        <div class="h-6"></div>
-        <article class="prose prose-zinc prose-invert max-w-2xl prose-h2:text-3xl prose-code:before:hidden prose-code:after:hidden ">
+        <div class="xl:h-6"></div>
+        <article class="prose prose-zinc px-4 lg:px-0 prose-invert max-w-2xl prose-h2:text-3xl prose-code:before:hidden prose-code:after:hidden ">
         <heading-anchors>
         ${data.content}
         </heading-anchors>

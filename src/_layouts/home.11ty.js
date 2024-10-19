@@ -10,7 +10,7 @@ export default class {
 
   render(data) {
     return `
-      <div class="container mx-auto home">
+      <div class="container mx-auto home px-4 pb-24 sm:pb-0 sm:px-0">
         <div>
           <img src="/images/logo.png" style="width:200px"></img>
         </div>
@@ -31,7 +31,7 @@ export default class {
           </details>
         </div>
         <div id="title-spacer" class="h-8"></div>
-        <div class="grid grid-cols-5 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-5 gap-4">
           ${renderNestedContent(data.collections.nestedContent)}
         </div>
       </div>
