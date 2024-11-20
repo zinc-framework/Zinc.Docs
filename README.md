@@ -39,3 +39,9 @@ anchors + toc
 
 style:
 * when linking to other content, link relative to the markdown file directly (aka `[/foo/bar.md]` instead of `[foo/bar]`) 
+
+todo:
+* need to add in metadata for each page (or programattically generate it based on page stuff?)
+* https://www.npmjs.com/package/eleventy-plugin-embedded-demos for demos
+* for social image gen https://www.npmjs.com/package/eleventy-plugin-social-share-card-generator doc pages can show doc names in the share img (or maybe actually https://www.npmjs.com/package/eleventy-plugin-social-img)
+* update dates for posts https://www.npmjs.com/package/eleventy-plugin-git-commit-date

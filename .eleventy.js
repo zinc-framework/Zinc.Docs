@@ -3,6 +3,7 @@ import relatedShortcode from "./src/_includes/shortcodes/related.js";
 import detailsShortcode from "./src/_includes/shortcodes/details.js";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginTOC from "eleventy-plugin-nesting-toc";
+import metagen from "eleventy-plugin-metagen";
 import { IdAttributePlugin } from "@11ty/eleventy";
 import { InputPathToUrlTransformPlugin } from "@11ty/eleventy";
 // import { isGlobMatch } from "@11ty/eleventy/Util/GlobMatcher.js";
@@ -20,6 +21,8 @@ export default function (eleventyConfig) {
     });
     //https://www.11ty.dev/docs/plugins/inputpath-to-url/
     eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
+    //https://metagendocs.netlify.app/docs/eleventy/plugin-usage#liquid-usage
+    eleventyConfig.addPlugin(metagen);
 
     eleventyConfig.addTransform("add-toc", async function (content) {
       // console.log(this.page.inputPath);
