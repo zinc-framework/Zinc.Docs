@@ -16,4 +16,4 @@ When you `Start()` a scene, the started scene is implicitly set as the Target, s
 
 You may not want to have started scenes automatically set as the target scenes if you are loading multiple scenes at the same time and want to make sure "gameplay scenes" don't bleed entities to "ui scenes" or otherwise.
 
-{% related "/src/guides/primitives/scene.md" %}
+{% related "scene.md" %}

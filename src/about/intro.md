@@ -1,9 +1,3 @@
----
-layout: page.11ty.js
-title: intro
-metaDescription: The homepage of my site
----
-
 # heading 1 test
 
 Zinc is meant to be very simple to use and an easy way to make games quickly. It’s also backed by a performant backend that does a lot of work. 

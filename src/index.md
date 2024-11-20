@@ -17,6 +17,6 @@ metadata:
 Zinc.Engine.Boot(() => new Square());
 ```
 
-[<u>get started</u>](./guides/getting-started.md)
+read the [<u>welcome page</u>](./about/welcome.md) to get started
 
 <!-- {% emoji "👋" "Waving hand" %} Hi there! -->

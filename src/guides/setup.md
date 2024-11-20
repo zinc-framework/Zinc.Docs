@@ -1,8 +1,4 @@
----
-layout: page.11ty.js
-title: getting started
-metaDescription: The homepage of my site
----
+You'll need to download a few things to get Zinc setup on your machine. Don't worry, it's not too much and you'll get going in no time.
 
 ## Download Dotnet
 
@@ -96,7 +92,7 @@ After running, you should see something like this on your screen:
 {% details "what about mono?" "zinc is a modern interpretation of a C#-centric game engine, and as such doesn't use mono/monogame. instead it has a its own cross-platform backend powered by sokol." %}
 
 
-{% related "/src/guides/working-with-csharp.md" %}
+{% related "working-with-csharp.md" %}
 
 
 

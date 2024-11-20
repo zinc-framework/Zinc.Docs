@@ -8,7 +8,7 @@ Zinc is meant to be a game making toolkit for people that have had some experien
 
 ## Basic Setup
 
-To get everything setup, follow the instructions on the [getting started page](../guides/getting-started.md). That will get your developer environment ready to go for making stuff with Zinc.
+First thing, follow the instructions on the [setup page](../guides/setup.md). That will get your developer environment ready to go for making stuff with Zinc.
 
 ## First Time Gamedev?
 

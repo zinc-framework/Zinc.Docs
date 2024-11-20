@@ -8,6 +8,7 @@ module.exports = {
     //https://lospec.com/palette-list/endesga-32
     backgroundColor: theme => ({
       'base': colors.base,
+      'hover': colors.hover,
       'pink': colors.pink,
       'blue': colors.blue,
       'green': colors.green,
